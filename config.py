@@ -1,4 +1,4 @@
 BASE_URL = "https://sandboxdnac.cisco.com"
-USERNAME = "devnetuser"
-PASSWORD = "Cisco123!"
+USERNAME = ""
+PASSWORD = ""
 SSL_VERIFY = True
