@@ -1,5 +1,6 @@
 import sys
 import requests
+from config import SSL_VERIFY
 
 def get_auth_token(base_url, username, password):
     """
@@ -11,7 +12,7 @@ def get_auth_token(base_url, username, password):
         response = requests.post(
             auth_url,
             auth=(username, password),
-            verify=False,  # Disable SSL verification (only for testing)
+            verify=SSL_VERIFY,
             timeout=60
         )
         response.raise_for_status()
@@ -34,7 +35,7 @@ def get_network_device_count(base_url, token):
         response = requests.get(
             url,
             headers=headers,
-            verify=False,  # Disable SSL verification (only for testing)
+            verify=SSL_VERIFY,
             timeout=60
         )
         response.raise_for_status()
@@ -58,7 +59,7 @@ def get_site_count(base_url, token):
         response = requests.get(
             url,
             headers=headers,
-            verify=False,  # Disable SSL verification (only for testing)
+            verify=SSL_VERIFY,
             timeout=60
         )
         response.raise_for_status()

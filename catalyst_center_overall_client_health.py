@@ -3,7 +3,7 @@ import json
 import requests
 
 from catalyst_center_utils import get_auth_token
-from config import BASE_URL, USERNAME, PASSWORD
+from config import BASE_URL, USERNAME, PASSWORD, SSL_VERIFY
 
 def main():
     """
@@ -22,7 +22,7 @@ def main():
         response = requests.get(
             devices_url,
             headers=headers,
-            verify=False,  # Disable SSL verification (only for testing)
+            verify=SSL_VERIFY,
             timeout=60
         )
         response.raise_for_status()
