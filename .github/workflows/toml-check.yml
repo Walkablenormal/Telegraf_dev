@@ -16,4 +16,4 @@ jobs:
         run: cargo install taplo-cli
       
       - name: Run taplo lint
-        run: taplo lint
+        run: taplo lint *.conf
