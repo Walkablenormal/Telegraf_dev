@@ -2,11 +2,9 @@ name: TOML linter
 
 on:
   push:
-    paths:
-      - '**.conf'
+    branches: [ main ]
   pull_request:
-    paths:
-      - '**.conf'
+    branches: [ main ]
 
 jobs:
   lint:
