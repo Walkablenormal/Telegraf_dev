@@ -1,7 +1,7 @@
-import requests
 import json
+import requests
 
-from catalyst_center_utils import *
+from catalyst_center_utils import get_auth_token, get_site_count
 from config import BASE_URL, USERNAME, PASSWORD
 
 # Disable SSL warnings (only use this in testing environments)
@@ -26,8 +26,7 @@ def main():
                 verify=False  # Disable SSL verification (only for testing)
             )
             response.raise_for_status()
-            page_devices = response.json()
-            
+            page_devices = response.json()            
             # Append the devices from this page to our list of all devices
             if 'response' in page_devices:
                 all_sites.extend(page_devices['response'])
