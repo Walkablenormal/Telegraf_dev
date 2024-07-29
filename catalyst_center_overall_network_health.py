@@ -28,11 +28,12 @@ def main():
             verify=False  # Disable SSL verification (only for testing)
         )
         response.raise_for_status()
-        return(response.json())
+        data = response.json()
+        print(json.dumps(data, indent=4))
 
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
         sys.exit(1)
 
 if __name__ == "__main__":
-    print(main())
+    main()

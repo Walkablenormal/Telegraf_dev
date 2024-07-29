@@ -31,7 +31,7 @@ def main():
             )
             response.raise_for_status()
             page_devices = response.json()
-            
+
             # Append the devices from this page to our list of all devices
             if 'response' in page_devices:
                 all_devices.extend(page_devices['response'])
@@ -43,7 +43,7 @@ def main():
             # Continue to the next iteration instead of exiting
             continue
 
-    return json.dumps(all_devices, indent=4)
+    print(json.dumps(all_devices, indent=4))
 
 if __name__ == "__main__":
     main()

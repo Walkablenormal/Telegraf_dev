@@ -43,7 +43,7 @@ def main():
             # Continue to the next iteration instead of exiting
             continue
 
-    return json.dumps(all_sites, indent=4)
+    print(json.dumps(all_sites, indent=4))
 
 if __name__ == "__main__":
     main()
