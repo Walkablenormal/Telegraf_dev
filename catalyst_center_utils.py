@@ -1,5 +1,4 @@
 import requests
-import json
 import sys
 
 # Disable SSL warnings (only use this in testing environments)

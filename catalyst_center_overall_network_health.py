@@ -2,14 +2,10 @@ import requests
 import json
 
 from catalyst_center_utils import *
+from config import BASE_URL, USERNAME, PASSWORD
 
 # Disable SSL warnings (only use this in testing environments)
 requests.packages.urllib3.disable_warnings()
-
-# API details
-BASE_URL = "https://sandboxdnac.cisco.com"
-USERNAME = "devnetuser"
-PASSWORD = "Cisco123!"
 
 def main():
     # Get authentication token

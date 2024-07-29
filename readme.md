@@ -48,7 +48,6 @@ This project provides Telegraf configuration and scripts to fetch data from Cisc
 
 currently, the project includes the following scripts to fetch data from various Cisco Catalyst Center API endpoints:
 
-
 To run a script manually:
 
 ## Contributing
