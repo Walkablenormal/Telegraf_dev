@@ -1,18 +1,16 @@
+import sys
 import requests
 import json
 
-from catalyst_center_utils import *
+from catalyst_center_utils import get_auth_token
 from config import BASE_URL, USERNAME, PASSWORD
-
-# Disable SSL warnings (only use this in testing environments)
-requests.packages.urllib3.disable_warnings()
 
 def main():
     # Get authentication token
     token = get_auth_token(BASE_URL, USERNAME, PASSWORD)
-    
+
     devices_url = f"{BASE_URL}/dna/intent/api/v1/network-health"
-    
+
     headers = {
         "X-Auth-Token": token,
         "Content-Type": "application/json",
@@ -21,7 +19,8 @@ def main():
         response = requests.get(
             devices_url,
             headers=headers,
-            verify=False  # Disable SSL verification (only for testing)
+            verify=False,  # Disable SSL verification (only for testing)
+            timeout=60
         )
         response.raise_for_status()
         data = response.json()

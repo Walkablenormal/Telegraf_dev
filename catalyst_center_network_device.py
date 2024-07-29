@@ -1,12 +1,9 @@
-import requests
 import json
+import requests
 
-from catalyst_center_utils import *
+
+from catalyst_center_utils import get_auth_token, get_network_device_count
 from config import BASE_URL, USERNAME, PASSWORD
-
-# Disable SSL warnings (only use this in testing environments)
-requests.packages.urllib3.disable_warnings()
-
 
 def main():
     # Get authentication token
@@ -24,7 +21,8 @@ def main():
             response = requests.get(
                 devices_url,
                 headers=headers,
-                verify=False  # Disable SSL verification (only for testing)
+                verify=False,  # Disable SSL verification (only for testing)
+                timeout=60
             )
             response.raise_for_status()
             page_devices = response.json()

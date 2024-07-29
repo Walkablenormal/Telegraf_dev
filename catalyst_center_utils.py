@@ -1,8 +1,5 @@
-import requests
 import sys
-
-# Disable SSL warnings (only use this in testing environments)
-requests.packages.urllib3.disable_warnings()
+import requests
 
 def get_auth_token(base_url, username, password):
     """
@@ -14,7 +11,8 @@ def get_auth_token(base_url, username, password):
         response = requests.post(
             auth_url,
             auth=(username, password),
-            verify=False  # Disable SSL verification (only for testing)
+            verify=False,  # Disable SSL verification (only for testing)
+            timeout=60
         )
         response.raise_for_status()
         return response.json()["Token"]
@@ -33,11 +31,12 @@ def get_network_device_count(base_url, token):
         response = requests.get(
             url,
             headers=headers,
-            verify=False  # Disable SSL verification (only for testing)
+            verify=False,  # Disable SSL verification (only for testing)
+            timeout=60
         )
         response.raise_for_status()
         return response.json()['response']
-    
+
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
         sys.exit(1)
@@ -53,11 +52,12 @@ def get_site_count(base_url, token):
         response = requests.get(
             url,
             headers=headers,
-            verify=False  # Disable SSL verification (only for testing)
+            verify=False,  # Disable SSL verification (only for testing)
+            timeout=60
         )
         response.raise_for_status()
         return response.json()['response']
-    
+
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
         sys.exit(1)

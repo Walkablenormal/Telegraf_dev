@@ -4,9 +4,6 @@ import requests
 from catalyst_center_utils import get_auth_token, get_site_count
 from config import BASE_URL, USERNAME, PASSWORD
 
-# Disable SSL warnings (only use this in testing environments)
-requests.packages.urllib3.disable_warnings()
-
 def main():
     # Get authentication token
     token = get_auth_token(BASE_URL, USERNAME, PASSWORD)
@@ -23,10 +20,12 @@ def main():
             response = requests.get(
                 devices_url,
                 headers=headers,
-                verify=False  # Disable SSL verification (only for testing)
+                verify=False,  # Disable SSL verification (only for testing)
+                timeout=60
             )
             response.raise_for_status()
-            page_devices = response.json()            
+            page_devices = response.json()
+
             # Append the devices from this page to our list of all devices
             if 'response' in page_devices:
                 all_sites.extend(page_devices['response'])
