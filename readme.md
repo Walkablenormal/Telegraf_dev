@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e1a94f9f-e6b0-445d-adf3-ec5b65abadea" alt="channels4_profile" width="15%">
+</p>
+
 # Cisco Catalyst Center Telegraf Integration
 
 This project provides Telegraf configuration and scripts to fetch data from Cisco Catalyst Center API endpoints. It allows you to collect metrics and insights from your Cisco Catalyst Center environment and integrate them with your monitoring and analytics tools.
