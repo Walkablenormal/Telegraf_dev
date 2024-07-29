@@ -6,8 +6,6 @@ Currently, this project is WIP 🚧
 
 ## Table of Contents
 
-- [Cisco Catalyst Center Telegraf Integration](#cisco-catalyst-center-telegraf-integration)
-  - [Table of Contents](#table-of-contents)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Configuration](#configuration)
@@ -52,11 +50,13 @@ Currently, this file contains the credentials of the Cisco DevNet Always-On Cata
 
 1. Start Telegraf with the new configuration:
 
-```systemctl restart telegraf```
+  ```systemctl restart telegraf```
 
 2. Verify that data is being collected by checking your configured output destination (e.g., InfluxDB, Prometheus, etc.).
 
 ## Routes
+
+The following routes are currently implemented:
 
 | Route       | Python file     | Telegraf config |
 | ----- | ----------- | --------------- |
