@@ -6,6 +6,9 @@ from catalyst_center_utils import get_auth_token, get_network_device_count
 from config import BASE_URL, USERNAME, PASSWORD
 
 def main():
+    """
+    Returns network device information from Catalyst Center.
+    """
     # Get authentication token
     token = get_auth_token(BASE_URL, USERNAME, PASSWORD)
     total_devices = get_network_device_count(BASE_URL, token)

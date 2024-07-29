@@ -6,6 +6,9 @@ from catalyst_center_utils import get_auth_token
 from config import BASE_URL, USERNAME, PASSWORD
 
 def main():
+    """
+    Returns network health information from Catalyst Center.
+    """
     # Get authentication token
     token = get_auth_token(BASE_URL, USERNAME, PASSWORD)
 
