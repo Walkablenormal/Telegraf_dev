@@ -21,6 +21,9 @@ def get_auth_token(base_url, username, password):
         sys.exit(1)
 
 def get_network_device_count(base_url, token):
+    """
+    Returns integer with total amount of network devices.
+    """
     url = f"{base_url}/dna/intent/api/v1/network-device/count"
     headers = {
         "X-Auth-Token": token,
@@ -42,6 +45,9 @@ def get_network_device_count(base_url, token):
         sys.exit(1)
 
 def get_site_count(base_url, token):
+    """
+    Returns integer with total amount of sites.
+    """
     url = f"{base_url}/dna/intent/api/v1/site/count"
     headers = {
         "X-Auth-Token": token,

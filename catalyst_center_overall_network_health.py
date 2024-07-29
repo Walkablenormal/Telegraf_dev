@@ -1,6 +1,6 @@
 import sys
-import requests
 import json
+import requests
 
 from catalyst_center_utils import get_auth_token
 from config import BASE_URL, USERNAME, PASSWORD
