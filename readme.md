@@ -6,7 +6,7 @@
 
 This project provides Telegraf configuration and scripts to fetch data from Cisco Catalyst Center API endpoints. It allows you to collect metrics and insights from your Cisco Catalyst Center environment and integrate them with your monitoring and analytics tools.
 
-Currently, this project is WIP 🚧
+🚧 Currently, this project is WIP! Changes to the way data is indexed and parsed may be made! 🚧
 
 ## Table of Contents
 
