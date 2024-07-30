@@ -17,6 +17,7 @@ This project provides Telegraf configuration and scripts to fetch data from Cisc
   - [Configuration](#configuration)
   - [Usage](#usage)
   - [Routes](#routes)
+  - [Roadmap](#roadmap)
   - [Contributing](#contributing)
   - [License](#license)
 
@@ -71,6 +72,18 @@ The following routes are currently implemented:
 |[/dna/intent/api/v1/network-health](https://developer.cisco.com/docs/dna-center/get-overall-network-health/)|catalyst_center_overall_network_health.py|catalyst_center_overall_network_health.conf|
 |[/dna/intent/api/v1/site-health](https://developer.cisco.com/docs/dna-center/get-site-health/)|catalyst_center_site_health.py|catalyst_center_site_health.conf|
 |[/dna/intent/api/v1/compliance](https://developer.cisco.com/docs/dna-center/get-compliance-status/)|catalyst_center_compliance.py|catalyst_center_compliance.conf|
+
+## Roadmap
+
+At some point; the following routes will also be implemented;
+
+- /dna/intent/api/v1/onboarding/pnp-device
+- /dna/intent/api/v1/topology/physical-topology
+- /dna/intent/api/v1/issues
+- /dna/intent/api/v1/onboarding/pnp-device
+- /dna/intent/api/v1/security-advisory/device-summary
+- dna/intent/api/v1/security-advisory/advisory
+- /dna/intent/api/v1/assurance/health
 
 ## Contributing
 
