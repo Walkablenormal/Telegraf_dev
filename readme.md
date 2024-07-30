@@ -70,6 +70,7 @@ The following routes are currently implemented:
 |[/dna/intent/api/v1/client-health](https://developer.cisco.com/docs/dna-center/get-overall-client-health/)|catalyst_center_overall_client_health.py|catalyst_center_overall_client_health.conf|
 |[/dna/intent/api/v1/network-health](https://developer.cisco.com/docs/dna-center/get-overall-network-health/)|catalyst_center_overall_network_health.py|catalyst_center_overall_network_health.conf|
 |[/dna/intent/api/v1/site-health](https://developer.cisco.com/docs/dna-center/get-site-health/)|catalyst_center_site_health.py|catalyst_center_site_health.conf|
+|[/dna/intent/api/v1/compliance](https://developer.cisco.com/docs/dna-center/get-compliance-status/)|catalyst_center_compliance.py|catalyst_center_compliance.conf|
 
 ## Contributing
 
