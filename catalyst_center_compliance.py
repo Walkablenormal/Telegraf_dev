@@ -7,7 +7,7 @@ from config import BASE_URL, USERNAME, PASSWORD, SSL_VERIFY
 
 def main():
     """
-    Returns physical topology information from Catalyst Center.
+    Returns compliance information from Catalyst Center.
     """
     # Get authentication token
     token = get_auth_token(BASE_URL, USERNAME, PASSWORD)
